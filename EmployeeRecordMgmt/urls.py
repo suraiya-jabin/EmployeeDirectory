@@ -20,8 +20,14 @@ from employee.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index,name='index'),
-    path('registration',registration,name='registration'),
-    path('emp_login',emp_login,name='emp_login'),
-    path('emp_home',emp_home,name='emp_home'),
+    path('registration/',registration,name='registration'),
+    path('emp_login/',emp_login,name='emp_login'),
+    path('emp_home/',emp_home,name='emp_home'),
+    path('profile/',profile,name='profile'),
+    path('logout/',Logout,name='logout'),
+    path('admin_login/',admin_login,name='admin_login'),
+    path('my_experience/',my_experience,name='my_experience'),
+    path('edit_experience/',edit_experience,name='edit_experience'),
 ]
+
 #username=ontora password=123
