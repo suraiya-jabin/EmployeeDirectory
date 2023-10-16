@@ -40,7 +40,7 @@
 
                             </span>
                         </div>
-                        <input type = "text" name = "password" class = "form-control py-4" placeholder = "Password">
+                        <input type = "text" name = "pwd" class = "form-control py-4" placeholder = "Password">
 
                     </div>
                     <input type = "submit" value = "login" class = "btn btn-success px-5" >
@@ -53,3 +53,15 @@
 
 </div>
 </body>
+
+{% if error == "no" %}
+<script>
+    alert('Login Successfully');
+    window.location = ('{% url 'admin_home' %}'); 
+</script>
+{% endif %}
+{% if error == 'yes' %}
+<script>
+    alert('Login Failed. Try Again....');
+</script>
+{% endif %}
