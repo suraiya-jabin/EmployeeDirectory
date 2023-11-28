@@ -33,7 +33,9 @@ urlpatterns = [
     path('change_password/',change_password,name='change_password'),
     path('admin_home/',admin_home,name='admin_home'),
     path('change_passwordadmin/',change_passwordadmin,name='change_passwordadmin'),
- 
+    path('all_employee/',all_employee,name='all_employee'),
+     path('all_employee/',all_employee,name='all_employee'),
+     path('edit_experience/<int:pid>',edit_experience,name='edit_experience'),
 ]
 
 #username=ontora password=123
