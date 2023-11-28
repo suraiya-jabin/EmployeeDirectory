@@ -1,2 +1,30 @@
+{% load static %}
 {% include 'header.html' %}
 
+<style>
+
+    .container-fluid {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden; /* Ensure the container doesn't show scrollbars */
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+    }
+</style>
+
+<!-- Display the GIF directly without a carousel -->
+<div class="container-fluid">
+    <!-- Replace the video tag with the image tag -->
+    <img src="{% static 'images/em.gif' %}" alt="Your GIF">
+</div>
+
+<!--footer start-->
+<div class="container-fluid bg-dark" style="height:100px">
+    <h4 class="text-center text-light pt-4">Employee Record Management</h4>
+    <p class="text-center text-light">&copy;abcdef</p>
+</div>
+<!--footer end-->
