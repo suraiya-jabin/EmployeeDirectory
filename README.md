@@ -14,8 +14,8 @@ The admin can view a consolidated list of all employee records, providing a quic
 Admin has the capability to edit and update employee profiles, ensuring that the information is accurate and up-to-date.
 ### Delete Records: 
 In cases where an employee leaves the organization, the admin can delete their record from the system.
-### Change Admin Password: T
-he admin has the option to change their own password for security purposes.
+### Change Admin Password: 
+The admin has the option to change their own password for security purposes.
 
 ## Employee Section:
 
