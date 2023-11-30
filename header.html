@@ -1,0 +1,60 @@
+{% load static %}
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Files -->
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' rel='icon'%}">
+  <link href="{% static 'assets/img/apple-touch-icon.png' rel='apple-touch-icon'%}">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'%}">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet'%}">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' rel='stylesheet'%}">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' rel='stylesheet'%}">
+
+  <!-- Template Main CSS File -->
+
+  <link rel="stylesheet" href="{% static 'cassets/css/style.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-c4gbe5ATVSr4hSSVo7p6+g4d2VqD1d3hpFFW5aDzkzOqbbjONt5b4MWEY1XdHFMU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Employee Directory</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %}active {% endif %}" href="{% url 'index' %}"><i class="fa fa-home"></i>
+            Hompage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/registration/' %}active {% endif %}" href="{% url 'registration'%}"><i class="fa fa-user-circle"></i>Employee Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/emp_login/' %}active {% endif %}" href="{% url 'emp_login' %}"><i class="fas fa-sign-in-alt"></i>Employee Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/admin_login/' %}active {% endif %}" href="{% url 'admin_login' %}"><i class="fas fa-sign-in-alt"></i>Admin Login</a>
+          </li>
+      </ul>
+    </div>
+  </nav> 
+  
