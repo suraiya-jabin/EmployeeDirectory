@@ -1,0 +1,104 @@
+{% extends 'emp_base.html' %}
+
+{% block main %}
+<div class="card shadow m-2">
+    <div class="card-body">
+       <a href = "{% url 'edit_myeducation' %}" class = "btn btn-primary float-right btn-sm">Edit Education Details</a>
+        <h5 class="p-2 text-primary" style="border-bottom:2px solid blue"><b>My Education Details</b></h5>
+    
+        <div vlass="Container-fluid">
+          <h1 class = "btn btn-dark float-left btn-sm form-control">SSC Information</h1>
+          <table class = "table table-bordered">
+            <tr>
+                <th>SSC Course Name</th>
+                <td>{{education.coursessc}}</td>
+            </tr>
+            
+            <tr>
+                <th>SSC School/College</th>
+                <td>{{education.schoolclgssc}}</td>
+            </tr>
+
+            <tr>
+                <th>Year of Passing of SSC</th>
+                <td>{{education.yearofpassingssc}}</td>
+            </tr>
+
+            <tr>
+                <th>SSC Result</th>
+                <td>{{education.percentagessc}}</td>
+            </tr>
+          </table> 
+          <h1 class = "btn btn-dark float-left btn-sm form-control">HSC Information</h1>
+
+          <table class = "table table-bordered">
+            <tr>
+                <th>HSC Course Name</th>
+                <td>{{education.coursehsc}}</td>
+            </tr>
+            
+            <tr>
+                <th>HSC School/College</th>
+                <td>{{education.schoolclghsc}}</td>
+            </tr>
+
+            <tr>
+                <th>Year of Passing of HSC</th>
+                <td>{{education.yearofpassinghsc}}</td>
+            </tr>
+
+            <tr>
+                <th>HSC Result</th>
+                <td>{{education.percentagehsc}}</td>
+            </tr>
+          </table> 
+          <h1 class = "btn btn-dark float-left btn-sm form-control">Graduate Information</h1>
+          <table class = "table table-bordered">
+            <tr>
+                <th>Graduate Subject</th>
+                <td>{{education.coursegra}}</td>
+            </tr>
+            
+            <tr>
+                <th>Graduate Institute</th>
+                <td>{{education.schoolclggra}}</td>
+            </tr>
+
+            <tr>
+                <th>Year of Passing of Graduation</th>
+                <td>{{education.yearofpassinggra}}</td>
+            </tr>
+
+            <tr>
+                <th>Graduation Result</th>
+                <td>{{education.percentagegra}}</td>
+            </tr>
+        </table> 
+            <h1 class = "btn btn-dark float-left btn-sm form-control">Post Graduation Information</h1>
+          <table class = "table table-bordered">
+            <tr>
+                <th>Post Graduation Course Name</th>
+                <td>{{education.coursepg}}</td>
+            </tr>
+            
+            <tr>
+                <th>Post Graduate Institute</th>
+                <td>{{education.schoolclgpg}}</td>
+            </tr>
+
+            <tr>
+                <th>Year of Passing of Post Graduation</th>
+                <td>{{education.yearofpassingpg}}</td>
+            </tr>
+
+            <tr>
+                <th>Post Graduate Result</th>
+                <td>{{education.percentagepg}}</td>
+            </tr>
+          </table> 
+
+        </div>
+    </div>
+</div>  
+
+{%endblock%}

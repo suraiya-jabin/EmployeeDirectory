@@ -1,0 +1,101 @@
+{% load static %}
+{% include 'header.html' %}
+
+<!-- Add Bootstrap CDN link in your header.html if not already included -->
+<!-- Example: <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
+<style>
+    /* Custom styles for the form */
+    .card {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 80px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+</style>
+<body style= "background-image : url({% static 'images/3.jpg' %})">
+<script>
+    function checkpassword() {
+        if (document.signup.pwd.value != document.signup.cpwd.value) {
+            alert('Password does not match');
+            document.signup.cpwd.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="text-primary" style="border-bottom: 2px solid blue"><b>Create an Account</b></h5>
+
+        <form method="post" name="signup" onsubmit="return checkpassword()">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-sm-6 form-group">
+                    <label>First Name</label>
+                    <input type="text" name="firstname" class="form-control" placeholder="Enter First Name" pattern="[A-Za-z]+" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastname" class="form-control" placeholder="Enter Last Name" pattern="[A-Za-z]+" required>
+                </div>
+
+                <div class="col-sm-12 form-group">
+                    <label>Employee Code</label>
+                    <input type="text" name="empcode" class="form-control" placeholder="Enter Your Employee Code" pattern="[0-9]+" required>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>Password</label>
+                    <input type="password" name="pwd" class="form-control" placeholder="Enter Your Password" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" name="cpwd" class="form-control" placeholder="Enter Password Again" required>
+                </div>
+                
+                <!-- Additional form fields can be added here -->
+                <!-- Example: -->
+                <!--
+                <div class="col-sm-12 form-group">
+                    <label>Additional Field</label>
+                    <input type="text" name="additional_field" class="form-control" placeholder="Enter Additional Field">
+                </div>
+                -->
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('SignUp Successfull');
+    window.location = ('{% url 'emp_login' %}');
+</script>
+{% endif %}
+{% if error == 'yes' %}
+<script>
+    alert('Something Went Wrong. Try Again....');
+</script>
+{% endif %}

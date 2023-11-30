@@ -1,0 +1,100 @@
+{% load static %}
+{% include 'header.html' %}
+
+<style>
+    .social-icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+
+    
+    div.container {
+        margin: 100px 80px 80px 100px;
+        
+    }
+
+
+   
+</style>
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <img src="{% static 'images/3.jpg' %}" alt="Image" class="img-fluid mt-1">
+            </div>
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mt-6">
+                        <div class="mb-4">
+                            <h3><u>Employee Login</u></h3>
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group first mt-2">
+                                <label>Email ID:</label>
+                                <input type="email" name="emailid" class="form-control" placeholder="Enter Email ID" required>
+                            </div>
+                            <div class="form-group last mb-4">
+                                <label>Password:</label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+                            </div>
+                            <input type="submit" value="Login" class="btn btn-block btn-primary">
+                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
+                            <div class="social-icons">
+                                
+                                <div class="social-icon facebook">
+                                    <a href="#">
+                                        <span class="fab fa-facebook"></span> 
+                                    </a>
+                                </div>
+                                <div class="social-icon twitter">
+                                    <a href="#">
+                                        <span class="fab fa-twitter"></span> 
+                                    </a>
+                                </div>
+                                <div class="social-icon google">
+                                    <a href="#">
+                                        <span class="fab fa-google"></span> 
+                                    </a>
+                                </div>
+                                <div class="social-icon linkedin">
+                                    <a href="#">
+                                        <span class="fab fa-linkedin"></span> 
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Login Successfull');
+    window.location = ('{% url 'emp_home' %}');
+</script>
+{% endif %}
+{% if error == 'yes' %}
+<script>
+    alert('Login Failed. Try Again....');
+</script>
+{% endif %}

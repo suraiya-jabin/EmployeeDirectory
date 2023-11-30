@@ -14,25 +14,21 @@
                 padding: 8px !important
             }
         </style>
-    
-    </head>
+
+            </head>
   <body>
     <div class = "container-fluid">
         <div class = "row">
-            <div class = "col-sm-2 p-2">
-                <center><img src = "{% static 'images/ab2.png' %}" width="140" height="140" class="img-thumbnail rounded-circle my-3"></center>
+            <div class = "col-sm-2 p-1">
+                <center><img src = "{% static 'images/ab.png' %}" width="140" height="140" class="img-thumbnail rounded-circle my-3"></center>
                 <div class = "list-group">
-                    <a href="{% url 'emp_home' %}" class="list-group-item  list-group-item-action  {% if request.path == '/emp_home/' %}active {% endif %}">Dashboard</a>
-                    <a href="{% url 'profile' %}" class="list-group-item  list-group-item-action {% if request.path == '/profile/' %}active {% endif %}">Profile</a>
-                    <a href="{% url 'my_experience' %}" class="list-group-item  list-group-item-action {% if request.path == '/my_experience/' %}active {% endif %}">My Experience</a>
-                    <a href="{% url 'edit_myexperience' %}" class="list-group-item  list-group-item-action {% if request.path == '/edit_myexperience/' %}active {% endif %}">Edit My Experience</a>
-                    <a href="{% url 'my_education' %}" class="list-group-item list-group-item-action {% if request.path == '/my_education/' %}active {% endif %}">Education</a>
-                    <a href="{% url 'edit_myeducation' %}" class="list-group-item  list-group-item-action {% if request.path == '/edit_myeducation/' %}active {% endif %}">Edit My Education</a>
-                    <a href="{% url 'change_password' %}" class="list-group-item  list-group-item-action {% if request.path == '/change_password/' %}active {% endif %}">Change Password</a>
-                    <a href="{% url 'logout' %}" class="list-group-item list-group-item-action">Logout</a>
+                    <a href="{% url 'admin_home' %}" class="list-group-item  list-group-item-action {% if request.path == '/admin_home/' %}active {% endif %}">Dashboard</a>
+                    <a href="{% url 'all_employee' %}" class="list-group-item  list-group-item-action {% if request.path == '/all_employee/' %}active {% endif %}">All Employees</a>
+                    <a href="{% url 'change_passwordadmin' %}" class="list-group-item  list-group-item-action {% if request.path == '/change_passwordadmin/' %}active {% endif %}">Change Password</a>
+                    <a href="{% url 'logout' %}" class="list-group-item  list-group-item-action">Logout</a>
                 </div>
             </div>
-            <div class="col-sm-10 p-0">
+            <div class="col-sm-10 p-2">
                 <div class="container-fluid">
                     <h5 class="text-center p-3 font-weight-bold" style="border-bottom:2px solid green;border-top:2px solid green">Employee Directory</h5>
                     <div class="card shadow" style="min-height: 89vh">

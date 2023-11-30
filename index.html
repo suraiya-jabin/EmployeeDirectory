@@ -1,0 +1,152 @@
+{% load static %}
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Add this link tag to include the Typed.js CSS (optional, for styling) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+   <!-- CSS Files -->
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' rel='icon'%}">
+  <link href="{% static 'assets/img/apple-touch-icon.png' rel='apple-touch-icon'%}">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel='stylesheet'>
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel='stylesheet'>
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel='stylesheet'>
+
+  <!-- Template Main CSS File -->
+
+  <link rel="stylesheet" href="{% static 'cassets/css/style.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-c4gbe5ATVSr4hSSVo7p6+g4d2VqD1d3hpFFW5aDzkzOqbbjONt5b4MWEY1XdHFMU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        /* Your existing styles here */
+        .container-fluid {
+            width: 100vw;
+            height: 101vh;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay-itro {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .hero-title {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero-subtitle {
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .overlay-mf {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(39, 166, 245, 0.8);
+            z-index: 1;
+        }
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div id="hero" class="hero route bg-image" style="background-image: url({% static 'images/6.jpg' %})">
+        <div class="overlay-itro"></div>
+        <div class="hero-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                  
+                    <h1 class="hero-title mb-4"><br>Welcome to Employee Record Management!</h1>
+                    <!-- Add an ID to the span for the Typed.js initialization -->
+                    <p class="hero-subtitle"><span id="typed-subtitle" data-typed-items="New here? Not registered yet?<br> Click on <b>Employee Signup</b> and then <b>Login</b>, Already <u>Registered</u>? <br> Go to <b>Employee Login</b>"></span></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Hero Section -->
+
+
+
+   
+       
+    <!-- Footer Section -->
+    <div class="container-fluid bg-dark" style="height: 100px;">
+        <h4 class="text-center text-light pt-4">Employee Record Management</h4>
+        <p class="text-center text-light">&copy;abcdef</p>
+    </div><!-- End Footer Section -->
+
+    <!-- Add this script tag to include the Typed.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Initialize Typed.js -->
+    <script>
+        var typed = new Typed('#typed-subtitle', {
+            strings: $('#typed-subtitle').data('typed-items').split(','),
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 2000,
+            startDelay: 1000,
+            loop: true
+        });
+    </script>
+
+</body>
+
+</html>
