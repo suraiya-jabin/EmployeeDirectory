@@ -21,20 +21,27 @@
         margin-bottom: 25px;
     }
 
+    
+    div.container {
+        margin: 100px 80px 80px 100px;
+        
+    }
+
+
    
 </style>
 
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <img src="{% static 'images/1.svg' %}" alt="Image" class="img-fluid mt-1">
+            <div class="col-md-6 ">
+                <img src="{% static 'images/3.jpg' %}" alt="Image" class="img-fluid mt-1">
             </div>
             <div class="col-md-6 contents">
                 <div class="row justify-content-center">
-                    <div class="col-md-8 mt-4">
+                    <div class="col-md-8 mt-6">
                         <div class="mb-4">
-                            <h3>Employee Login</h3>
+                            <h3><u>Employee Login</u></h3>
                         </div>
                         <form method="post">
                             {% csrf_token %}
@@ -82,7 +89,7 @@
 
 {% if error == "no" %}
 <script>
-    alert('Login Successfully');
+    alert('Login Successfull');
     window.location = ('{% url 'emp_home' %}');
 </script>
 {% endif %}
