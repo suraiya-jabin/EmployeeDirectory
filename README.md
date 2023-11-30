@@ -19,7 +19,7 @@ View Profile: Employees can view and manage their overall profile, including per
 Update Information: The system allows employees to update their educational background, work experience, and other relevant information.
 Change Password: Employees have the option to change their login password for enhanced security.
 
-##Key Features:
+## Key Features:
 
 Security: The system employs secure login mechanisms to ensure the confidentiality of employee data.
 User-Friendly Interface: The interface is designed to be intuitive, making it easy for both administrators and employees to navigate the system.
